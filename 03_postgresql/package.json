@@ -1,9 +1,26 @@
 {
+  "name": "03_postgresql",
+  "version": "1.0.0",
+  "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "node --watch server.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db:migrate": "drizzle-kit migrate --config drizzle.config.js",
+    "db:generate": "drizzle-kit generate --config drizzle.config.js",
+    "dev": "nodemon server.js"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
   "dependencies": {
-    "express": "^5.2.1"
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.31.2",
+    "express": "^4.19.2",
+    "pg": "^8.12.0"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.22.7",
+    "nodemon": "^3.1.4"
   }
 }
